@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div class="h-20 p-4 fixed w-full top-0 flex items-center justify-between z-100">
+  <header class="h-20 p-4 fixed w-full top-0 flex items-center justify-between z-[100] bg-white">
     <!-- TODO: componentize -->
     <RouterLink
       to="/"
-      class="text-2xl font-thin underline underline-orange px-5 text-secondary"
+      class="text-2xl font-thin underline decoration-primary px-5 text-secondary-50"
     >
       <!-- TODO: get it from somwhere -->
       fiatlinux.it
@@ -25,6 +25,6 @@
         Registrati
       </MainButton>
     </div>
-  </div>
+  </header>
 </template>
 

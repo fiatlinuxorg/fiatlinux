@@ -67,9 +67,4 @@
 	.flex-center {
 		@apply flex items-center justify-center;
 	}
-
-	/* TODO: handle colors in better way */
-	.underline-orange {
-		@apply decoration-primary;
-	}
 }
