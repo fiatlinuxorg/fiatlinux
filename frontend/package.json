@@ -13,5 +13,13 @@
     "nuxt": "^3.10.3",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "latest",
+    "@nuxtjs/tailwindcss": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.21.1"
   }
 }
