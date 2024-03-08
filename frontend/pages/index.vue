@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="overflow-auto max-h-[100svh]">
     <LandingHeader />
     <MainHero />
     <LandingSection />

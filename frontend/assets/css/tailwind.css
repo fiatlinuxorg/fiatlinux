@@ -26,6 +26,11 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 
+	body,
+	#__nuxt {
+		overflow: hidden;
+	}
+
 	body {
 		font-family: 'Figtree', sans-serif;
 	}

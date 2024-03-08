@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="h-20 p-4 sticky flex items-center justify-between z-100">
+  <div class="h-20 p-4 fixed w-full top-0 flex items-center justify-between z-100">
     <!-- TODO: componentize -->
     <RouterLink
       to="/"

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="min-h-[100svh] flex-center !flex-col">
+  <div class="h-screen flex-center !flex-col">
     <HeroBanner />
     <RandomQuotes />
   </div>
