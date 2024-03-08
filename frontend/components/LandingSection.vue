@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col items-center justify-center h-screen">
     <HorizontalBox>
       <template #left>
         <h3 class="underline decoration-primary text-2xl font-bold text-secondary sm:text-3xl md:text-4xl lg:text-5xl">

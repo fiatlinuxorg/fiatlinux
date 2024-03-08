@@ -3,10 +3,15 @@
 </script>
 
 <template>
-  <div>
-    Landing Footer
+  <footer class="bg-secondary flex-center flex-col h-52 w-full">
+    <div class="font-thin text-white">
+      © 2023 fiatlinux.it
+    </div>
 
-    <div />
-  </div>
+    <SquaresDecoration
+      class="mt-4"
+      variant="border"
+    />
+  </footer>
 </template>
 

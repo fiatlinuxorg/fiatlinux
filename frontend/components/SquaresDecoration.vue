@@ -29,7 +29,7 @@ const squares = [
     <div
       v-for="square in squares"
       :key="square"
-      :class="[variant, '!border w-5 h-5']"
+      :class="[variant, '!border-2 w-5 h-5']"
       :style="{ 
         backgroundColor: square,
         borderColor: square
