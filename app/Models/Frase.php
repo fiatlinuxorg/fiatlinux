@@ -19,6 +19,7 @@ class Frase extends Model
         'aggiunto_da' => 'string', // aggiunto_da is a string
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
+        'categoria' => 'string'
     ];
 
     public function user()

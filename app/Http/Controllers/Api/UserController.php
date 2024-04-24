@@ -8,6 +8,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
+
 
 class UserController extends Controller
 {
@@ -178,6 +182,24 @@ class UserController extends Controller
 
             $user->name = $request->name;
             $user->email = $request->email;
+            if ($request->pfp) {
+                // Upload image: decode and save
+                // Remove data:image/png;base64, from the image string
+                $request->pfp = preg_replace('/^data:image\/\w+;base64,/', '', $request->pfp);
+                $image = base64_decode($request->pfp);
+                // Crop image to 300 in width
+                $manager = new ImageManager(new Driver());
+
+                $image = $manager->read($image);
+                $calc_height = $image->height() * 300 / $image->width();
+                $image = $image->resize(300, $calc_height)->crop(300, 300)->toWebp(70);
+                $imageName = $request->name . time() . '.webp';
+                // Save image
+                Storage::disk('public')->put('user_avatars/' . $imageName, $image);
+                $user->pfp = $imageName;
+            } else {
+                $user->pfp = 'default.jpg';
+            }
             $user->save();
 
             return response()->json(
